@@ -1,0 +1,16 @@
+---Create a ROS package---
+cd ~/catkin_ws/src
+catkin_create_pkg turtlesim_follow rospy geometry_msgs turtlesim
+
+---Put your Python node inside the package---
+cd turtlesim_follow/src
+# copy turtle_follower.py here
+chmod +x turtle_follower.py
+
+---Build your workspace---
+cd ~/catkin_ws
+catkin_make
+source devel/setup.bash
+
+---Run the follower node---
+rosrun turtlesim_follow turtle_follower.py
