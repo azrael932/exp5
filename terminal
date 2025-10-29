@@ -11,13 +11,14 @@ chmod +x turtle_follower.py
 cd ~/turtle_follower_ws
 catkin_make
 source devel/setup.bash
---- To use keyboard----
+
+--- To use keyboard--  new terminal----
 rosrun turtlesim turtle_teleop_key
 
---to spawn another bot---
+-- new terminal--to spawn another bot---
 rosservice call /spawn 5.0 5.0 0.0 "turtle2"
 
----Run the follower node---
+-- new terminal--Run the follower node---
 rosrun turtlesim_follow turtle_follower.py
 
 
